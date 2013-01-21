@@ -49,7 +49,7 @@ public class VppSettings extends Activity implements CompoundButton.OnCheckedCha
 
         setContentView(R.layout.act_settings);
 
-        mSharedPref = getSharedPreferences(VPP_SHARED_PREF, 0);
+        mSharedPref = getSharedPreferences(VPP_SHARED_PREF, Activity.MODE_WORLD_READABLE);
     }
 
 
