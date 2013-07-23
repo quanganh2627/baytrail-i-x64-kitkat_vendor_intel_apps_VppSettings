@@ -14,6 +14,13 @@
       limitations under the License.
  -->
 <resources>
-    <string name="vpp_settings">Intel Smart Video</string>
-    <string name="vpp_settings_tips">Turning on Intel Smart Video feature will enhance video quality, but it will reduce battery usage also.</string>
+    <string name="vpp_settings">Intel<sup><small>®</small></sup> Smart Video</string>
+    <string name="vpp_settings_enabler">"Enable Intel<sup><small>®</small></sup> Smart Video"</string>
+    <string name="vpp_settings_tips">Intel<sup>®</sup> Smart Video improves video quality by enhancing color and contrast, reducing noise, and smoothing out video playback</string>
+    <string name="strength">Strength of filters</string>
+    <string name="strength_desc">Different levels of video noise and compression artifacts quality improvement setting</string>
+
+    <string name="vpp_low">Low</string>
+    <string name="vpp_medium">Medium</string>
+    <string name="vpp_high">High</string>
 </resources>

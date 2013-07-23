@@ -19,12 +19,55 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center"
-        android:text="@string/vpp_settings_tips"
-        android:padding="10dip" />
-
+    <RelativeLayout
+        style="@style/item"
+        >
+        <TextView
+            android:id="@id/title_enabler"
+            style="@style/title"
+            android:layout_toLeftOf="@id/switcher"
+            android:text="@string/vpp_settings_enabler"
+            />
+        <TextView
+            android:layout_below="@id/title_enabler"
+            android:layout_toLeftOf="@id/switcher"
+            style="@style/desc"
+            android:text="@string/vpp_settings_tips"
+            />
+        <Switch android:id="@id/switcher"
+            style="@style/control"
+            android:focusable="false"
+            android:clickable="true" />
+    </RelativeLayout>
+    <ImageView
+        style="@style/divider"
+        />
+    <RelativeLayout
+        android:id="@id/box"
+        android:orientation="horizontal"
+        style="@style/item"
+        >
+        <TextView
+            android:id="@id/title_strength"
+            style="@style/title"
+            android:layout_toLeftOf="@id/spinner"
+            android:text="@string/strength"
+            />
+        <TextView
+            android:layout_below="@id/title_strength"
+            style="@style/desc"
+            android:layout_toLeftOf="@id/spinner"
+            android:text="@string/strength_desc"
+            />
+        <Spinner
+            android:id="@id/spinner"
+            style="@style/control"
+            android:entries="@array/vpp_strength"
+            android:prompt="@string/vpp_medium"
+            />
+    </RelativeLayout>
+    <ImageView
+        android:id="@id/divider"
+        style="@style/divider"
+        />
 </LinearLayout>

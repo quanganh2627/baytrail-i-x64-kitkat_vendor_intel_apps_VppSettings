@@ -1,0 +1,8 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item type="id" name="title_enabler" />
+    <item type="id" name="title_strength" />
+    <item type="id" name="switcher" />
+    <item type="id" name="box" />
+    <item type="id" name="divider" />
+    <item type="id" name="spinner" />
+</resources>
