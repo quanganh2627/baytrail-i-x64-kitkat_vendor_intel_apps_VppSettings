@@ -17,10 +17,4 @@
     <string name="vpp_settings">英特尔<sup><small>®</small></sup>视频优化</string>
     <string name="vpp_settings_enabler">开启英特尔<sup><small>®</small></sup>视频优化</string>
     <string name="vpp_settings_tips">英特尔<sup><small>®</small></sup>视频优化软件能够降低视频噪音，增加色彩饱和度和对比度，以及播放的流畅度，以此来提高视频播放质量</string>
-    <string name="strength">优化的强度</string>
-    <string name="strength_desc">提供不同强度的视频优化功能</string>
-
-    <string name="vpp_low">低</string>
-    <string name="vpp_medium">中</string>
-    <string name="vpp_high">高</string>
 </resources>

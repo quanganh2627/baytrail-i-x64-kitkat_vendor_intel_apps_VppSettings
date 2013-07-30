@@ -17,10 +17,4 @@
     <string name="vpp_settings">英特爾<sup><small>®</small></sup>視頻優化</string>
     <string name="vpp_settings_enabler">開啓英特爾<sup><small>®</small></sup>視頻優化</string>
     <string name="vpp_settings_tips">英特爾<sup><small>®</small></sup>視頻優化軟件能夠降低視頻噪音，增加色彩飽和度和對比度，以及播放的流暢度，以此來提高視頻播放質量</string>
-    <string name="strength">優化的強度</string>
-    <string name="strength_desc">提供不同强度的视频优化功能</string>
-
-    <string name="vpp_low">低</string>
-    <string name="vpp_medium">中</string>
-    <string name="vpp_high">高</string>
 </resources>
