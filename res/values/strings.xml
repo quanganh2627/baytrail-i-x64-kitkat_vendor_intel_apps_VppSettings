@@ -15,6 +15,8 @@
  -->
 <resources>
     <string name="vpp_settings">Intel<sup><small>®</small></sup> Smart Video</string>
-    <string name="vpp_settings_enabler">"Enable Intel<sup><small>®</small></sup> Smart Video"</string>
-    <string name="vpp_settings_tips">Intel<sup>®</sup> Smart Video improves video quality by enhancing color and contrast, reducing noise, and smoothing out video playback</string>
+    <string name="frc_title">Smooth Video</string>
+    <string name="frc_desc">Adjusts video to provide smoother motion during playback.</string>
+    <string name="vpp_title">Enhance Video</string>
+    <string name="vpp_desc">Improves video quality by reducing noise, and enhancing color and constrast.</string>
 </resources>

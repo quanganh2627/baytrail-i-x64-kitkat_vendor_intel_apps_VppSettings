@@ -15,6 +15,8 @@
  -->
 <resources>
     <string name="vpp_settings">英特尔<sup><small>®</small></sup>视频优化</string>
-    <string name="vpp_settings_enabler">开启英特尔<sup><small>®</small></sup>视频优化</string>
-    <string name="vpp_settings_tips">英特尔<sup><small>®</small></sup>视频优化软件能够降低视频噪音，增加色彩饱和度和对比度，以及播放的流畅度，以此来提高视频播放质量</string>
+    <string name="frc_title">流畅度增强</string>
+    <string name="frc_desc">在播放过程中增强视频的流畅度</string>
+    <string name="vpp_title">清晰度增强</string>
+    <string name="vpp_desc">在播放过程里增强视频的清晰度</string>
 </resources>
