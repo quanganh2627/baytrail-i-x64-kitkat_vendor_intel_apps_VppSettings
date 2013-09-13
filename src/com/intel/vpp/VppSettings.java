@@ -20,6 +20,8 @@ import android.app.Activity;
 
 import android.content.SharedPreferences;
 
+import android.os.SystemProperties;
+
 import android.os.Bundle;
 
 import android.util.Log;
@@ -35,11 +37,15 @@ public class VppSettings extends Activity implements CompoundButton.OnCheckedCha
     private static final String TAG = "VppSettings";
 
     private static final String VPP_SHARED_PREF = "vpp_settings";
+    private static final String FRC_STATUS = "frc_status";
+    private static final String[] FRC_STATUS_VALUE = {"0frc", "1frc"};
     private static final String VPP_STATUS = "vpp_status";
+    private static final String[] VPP_STATUS_VALUE = {"0vpp", "1vpp"};
 
-    private boolean mStatus;
+    private int mStatus;
     private SharedPreferences mSharedPref;
-    private Switch mSwitch;
+    private Switch mFrcSwitch;
+    private Switch mVppSwitch;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -49,7 +55,19 @@ public class VppSettings extends Activity implements CompoundButton.OnCheckedCha
 
         setContentView(R.layout.act_settings);
 
-        mSwitch = (Switch)findViewById(R.id.switcher);
+        int showFRC = 0;
+        try {
+            showFRC = SystemProperties.getInt("vppsettings.frc", 0);
+        } catch (Exception e) {
+            Log.e(TAG, "invalid vppsettings.frc value");
+            showFRC = 0;
+        }
+        if (showFRC == 0) {
+            findViewById(R.id.frc_layout).setVisibility(View.GONE);
+        }
+
+        mFrcSwitch = (Switch)findViewById(R.id.frc_switcher);
+        mVppSwitch = (Switch)findViewById(R.id.vpp_switcher);
         mSharedPref = getSharedPreferences(VPP_SHARED_PREF, Activity.MODE_WORLD_READABLE);
     }
 
@@ -57,23 +75,43 @@ public class VppSettings extends Activity implements CompoundButton.OnCheckedCha
     @Override
     public void onResume() {
         super.onResume();
-        mStatus = mSharedPref.getBoolean(VPP_STATUS, false);
+        try {
+            mStatus = Integer.valueOf(mSharedPref.getString(FRC_STATUS, FRC_STATUS_VALUE[0]).substring(0, 1)).intValue();
+        } catch (Exception e) {
+            mStatus = 0;
+        }
         SharedPreferences.Editor editor = mSharedPref.edit();
-        mSwitch.setOnCheckedChangeListener(this);
-        mSwitch.setChecked(mStatus);
+        mFrcSwitch.setOnCheckedChangeListener(this);
+        mFrcSwitch.setChecked(mStatus > 0);
+
+        try {
+            mStatus = Integer.valueOf(mSharedPref.getString(VPP_STATUS, VPP_STATUS_VALUE[0]).substring(0, 1)).intValue();
+        } catch (Exception e) {
+            mStatus = 0;
+        }
+        editor = mSharedPref.edit();
+        mVppSwitch.setOnCheckedChangeListener(this);
+        mVppSwitch.setChecked(mStatus > 0);
+
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        mSwitch.setOnCheckedChangeListener(null);
+        mFrcSwitch.setOnCheckedChangeListener(null);
+        mVppSwitch.setOnCheckedChangeListener(null);
     }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        mStatus = isChecked;
-        SharedPreferences.Editor editor = mSharedPref.edit();
-        editor.putBoolean(VPP_STATUS, mStatus).commit();
+        mStatus = isChecked ? 1 : 0;
+        if (buttonView == mFrcSwitch) {
+            SharedPreferences.Editor editor = mSharedPref.edit();
+            editor.putString(FRC_STATUS, FRC_STATUS_VALUE[mStatus]).commit();
+        } else if (buttonView == mVppSwitch) {
+            SharedPreferences.Editor editor = mSharedPref.edit();
+            editor.putString(VPP_STATUS, VPP_STATUS_VALUE[mStatus]).commit();
+        }
     }
 
     @Override

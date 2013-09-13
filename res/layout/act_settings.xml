@@ -20,21 +20,45 @@
     android:layout_height="fill_parent"
     >
     <RelativeLayout
+        android:id="@id/frc_layout"
         style="@style/item"
         >
         <TextView
-            android:id="@id/title_enabler"
+            android:id="@id/frc"
             style="@style/title"
-            android:layout_toLeftOf="@id/switcher"
-            android:text="@string/vpp_settings_enabler"
+            android:layout_toLeftOf="@id/frc_switcher"
+            android:text="@string/frc_title"
             />
         <TextView
-            android:layout_below="@id/title_enabler"
-            android:layout_toLeftOf="@id/switcher"
+            android:layout_below="@id/frc"
+            android:layout_toLeftOf="@id/frc_switcher"
             style="@style/desc"
-            android:text="@string/vpp_settings_tips"
+            android:text="@string/frc_desc"
             />
-        <Switch android:id="@id/switcher"
+        <Switch android:id="@id/frc_switcher"
+            style="@style/control"
+            android:focusable="false"
+            android:clickable="true" />
+    </RelativeLayout>
+    <ImageView
+        style="@style/divider"
+        />
+    <RelativeLayout
+        style="@style/item"
+        >
+        <TextView
+            android:id="@id/vpp"
+            style="@style/title"
+            android:layout_toLeftOf="@id/vpp_switcher"
+            android:text="@string/vpp_title"
+            />
+        <TextView
+            android:layout_below="@id/vpp"
+            android:layout_toLeftOf="@id/vpp_switcher"
+            style="@style/desc"
+            android:text="@string/vpp_desc"
+            />
+        <Switch android:id="@id/vpp_switcher"
             style="@style/control"
             android:focusable="false"
             android:clickable="true" />
