@@ -30,6 +30,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import android.widget.CompoundButton;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 
 public class VppSettings extends Activity implements CompoundButton.OnCheckedChangeListener {
@@ -63,7 +64,9 @@ public class VppSettings extends Activity implements CompoundButton.OnCheckedCha
             showFRC = 0;
         }
         if (showFRC == 0) {
-            findViewById(R.id.frc_layout).setVisibility(View.GONE);
+            RelativeLayout frcLayout = (RelativeLayout)findViewById(R.id.frc_layout);
+            if (frcLayout != null)
+                frcLayout.setVisibility(View.GONE);
         }
 
         mFrcSwitch = (Switch)findViewById(R.id.frc_switcher);
@@ -80,26 +83,31 @@ public class VppSettings extends Activity implements CompoundButton.OnCheckedCha
         } catch (Exception e) {
             mStatus = 0;
         }
-        SharedPreferences.Editor editor = mSharedPref.edit();
-        mFrcSwitch.setOnCheckedChangeListener(this);
-        mFrcSwitch.setChecked(mStatus > 0);
+        if (mFrcSwitch != null) {
+            mFrcSwitch.setOnCheckedChangeListener(this);
+            mFrcSwitch.setChecked(mStatus > 0);
+        }
 
         try {
             mStatus = Integer.valueOf(mSharedPref.getString(VPP_STATUS, VPP_STATUS_VALUE[0]).substring(0, 1)).intValue();
         } catch (Exception e) {
             mStatus = 0;
         }
-        editor = mSharedPref.edit();
-        mVppSwitch.setOnCheckedChangeListener(this);
-        mVppSwitch.setChecked(mStatus > 0);
+        if (mVppSwitch != null) {
+            mVppSwitch.setOnCheckedChangeListener(this);
+            mVppSwitch.setChecked(mStatus > 0);
+        }
 
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        mFrcSwitch.setOnCheckedChangeListener(null);
-        mVppSwitch.setOnCheckedChangeListener(null);
+        if (mFrcSwitch != null)
+            mFrcSwitch.setOnCheckedChangeListener(null);
+
+        if (mVppSwitch != null)
+            mVppSwitch.setOnCheckedChangeListener(null);
     }
 
     @Override
