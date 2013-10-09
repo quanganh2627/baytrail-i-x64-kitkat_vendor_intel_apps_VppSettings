@@ -53,10 +53,11 @@
             android:text="@string/vpp_title"
             />
         <TextView
+            android:id="@id/vpp_desc"
             android:layout_below="@id/vpp"
             android:layout_toLeftOf="@id/vpp_switcher"
             style="@style/desc"
-            android:text="@string/vpp_desc"
+            android:text="@string/vpp_desc_vsp"
             />
         <Switch android:id="@id/vpp_switcher"
             style="@style/control"
