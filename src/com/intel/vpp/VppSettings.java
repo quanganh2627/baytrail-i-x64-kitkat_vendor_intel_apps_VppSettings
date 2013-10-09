@@ -32,6 +32,7 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
+import android.widget.TextView;
 
 public class VppSettings extends Activity implements CompoundButton.OnCheckedChangeListener {
 
@@ -67,6 +68,10 @@ public class VppSettings extends Activity implements CompoundButton.OnCheckedCha
             RelativeLayout frcLayout = (RelativeLayout)findViewById(R.id.frc_layout);
             if (frcLayout != null)
                 frcLayout.setVisibility(View.GONE);
+
+            TextView vppDesc = (TextView)findViewById(R.id.vpp_desc);
+            if (vppDesc != null)
+                vppDesc.setText(getString(R.string.vpp_desc_gen));
         }
 
         mFrcSwitch = (Switch)findViewById(R.id.frc_switcher);

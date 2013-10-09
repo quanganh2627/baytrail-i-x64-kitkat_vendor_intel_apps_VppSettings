@@ -18,5 +18,6 @@
     <string name="frc_title">流暢度增強</string>
     <string name="frc_desc">在播放過程中增強視頻的流暢度</string>
     <string name="vpp_title">清晰度增強</string>
-    <string name="vpp_desc">在播放過程裏增強視頻的清晰度</string>
+    <string name="vpp_desc_vsp">在播放過程裏增強視頻的清晰度</string>
+    <string name="vpp_desc_gen">在播放過程裏增強視頻的清晰度</string>
 </resources>
