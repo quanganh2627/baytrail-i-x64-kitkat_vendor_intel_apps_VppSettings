@@ -19,6 +19,7 @@ package com.intel.vpp;
 import android.app.Activity;
 
 import android.content.SharedPreferences;
+import android.content.Intent;
 
 import android.os.SystemProperties;
 
@@ -33,6 +34,7 @@ import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
+import com.intel.multidisplay.DisplaySetting;
 
 public class VppSettings extends Activity implements CompoundButton.OnCheckedChangeListener {
 
@@ -124,6 +126,12 @@ public class VppSettings extends Activity implements CompoundButton.OnCheckedCha
         } else if (buttonView == mVppSwitch) {
             SharedPreferences.Editor editor = mSharedPref.edit();
             editor.putString(VPP_STATUS, VPP_STATUS_VALUE[mStatus]).commit();
+
+            Bundle bundle = new Bundle();
+            bundle.putInt("status", mStatus);
+            Intent intent = new Intent(DisplaySetting.MDS_SET_VPP_STATUS);
+            intent.putExtras(bundle);
+            sendBroadcast(intent);
         }
     }
 
