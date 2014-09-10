@@ -11,7 +11,7 @@
     <application android:label="@string/vpp_settings"
             android:icon="@mipmap/ic_launcher_settings"
             android:taskAffinity=""
-            android:theme="@android:style/Theme.Holo"
+            android:theme="@android:style/Theme.Material.Settings"
             android:uiOptions="splitActionBarWhenNarrow"
             android:hardwareAccelerated="true">
 
