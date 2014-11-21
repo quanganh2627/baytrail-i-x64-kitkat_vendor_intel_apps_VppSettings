@@ -14,10 +14,10 @@
       limitations under the License.
  -->
 <resources>
-    <string name="vpp_settings">Intel Smart Video</string>
-    <string name="frc_title">Smooth Video</string>
-    <string name="frc_desc">Adjusts video to provide smoother motion during playback.</string>
-    <string name="vpp_title">Enhance Video</string>
-    <string name="vpp_desc_vsp">Improves video quality by reducing noise, and enhancing color and constrast.</string>
-    <string name="vpp_desc_gen">Improves video quality by reducing noise and eliminating artifacts with interlaced content.</string>
+    <string name="vpp_settings">"Intel 智慧視訊"</string>
+    <string name="frc_title">"流暢視頻"</string>
+    <string name="frc_desc">"調整視訊，使播放時的畫面動作更為流暢。"</string>
+    <string name="vpp_title">"提升視頻品質"</string>
+    <string name="vpp_desc_vsp">"透過減少雜訊並增強色彩和對比度改善視訊品質。"</string>
+    <string name="vpp_desc_gen">"透過減少雜訊並消除交錯式內容中的假影改善視訊品質。"</string>
 </resources>

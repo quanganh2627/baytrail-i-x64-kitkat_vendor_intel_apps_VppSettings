@@ -14,10 +14,10 @@
       limitations under the License.
  -->
 <resources>
-    <string name="vpp_settings">英特爾<sup><small>®</small></sup>視頻優化</string>
-    <string name="frc_title">流暢度增強</string>
-    <string name="frc_desc">在播放過程中增強視頻的流暢度</string>
-    <string name="vpp_title">清晰度增強</string>
-    <string name="vpp_desc_vsp">在播放過程裏增強視頻的清晰度</string>
-    <string name="vpp_desc_gen">在播放過程裏增強視頻的清晰度</string>
+    <string name="vpp_settings">"Intel 智慧型影片"</string>
+    <string name="frc_title">"流暢的影片"</string>
+    <string name="frc_desc">"調整影片，以在播放時提供更流暢的動態。"</string>
+    <string name="vpp_title">"提升影片品質"</string>
+    <string name="vpp_desc_vsp">"透過降低噪音並增強色彩和對比度來提升影片品質。"</string>
+    <string name="vpp_desc_gen">"透過降低噪音與去除交錯式影片的雜訊來提升影片品質。"</string>
 </resources>

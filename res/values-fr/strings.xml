@@ -14,10 +14,10 @@
       limitations under the License.
  -->
 <resources>
-    <string name="vpp_settings">Intel<sup><small>®</small></sup> Smart vidéo</string>
-    <string name="frc_title">vidéo fluide</string>
-    <string name="frc_desc">Règle pour fournir un mouvement plus fluide lors de la lecture vidéo.</string>
-    <string name="vpp_title">améliorer la vidéo</string>
-    <string name="vpp_desc_vsp">Améliore la qualité vidéo en réduisant le bruit et l\'amélioration de couleur et de contraste.</string>
-    <string name="vpp_desc_gen">Améliore la qualité vidéo en réduisant le bruit et artefacts éliminer avec un contenu entrelacé.</string>
+    <string name="vpp_settings">"Vidéo intelligente Intel"</string>
+    <string name="frc_title">"Vidéo fluide"</string>
+    <string name="frc_desc">"Règle la vidéo pour améliorer la fluidité de la lecture."</string>
+    <string name="vpp_title">"Améliorer la vidéo"</string>
+    <string name="vpp_desc_vsp">"Améliore la qualité de la vidéo en réduisant le bruit et en augmentant la couleur et le contraste."</string>
+    <string name="vpp_desc_gen">"Améliore la qualité de la vidéo en réduisant le bruit et en éliminant les artefacts avec du contenu entrelacé."</string>
 </resources>
