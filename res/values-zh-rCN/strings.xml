@@ -14,10 +14,10 @@
       limitations under the License.
  -->
 <resources>
-    <string name="vpp_settings">英特尔<sup><small>®</small></sup>视频优化</string>
-    <string name="frc_title">流畅度增强</string>
-    <string name="frc_desc">在播放过程中增强视频的流畅度</string>
-    <string name="vpp_title">清晰度增强</string>
-    <string name="vpp_desc_vsp">在播放过程里增强视频的清晰度</string>
-    <string name="vpp_desc_gen">在播放过程里增强视频的清晰度</string>
+    <string name="vpp_settings">"英特尔智能视频"</string>
+    <string name="frc_title">"提高视频流畅度"</string>
+    <string name="frc_desc">"调节视频，使视频播放更加流畅。"</string>
+    <string name="vpp_title">"增强视频"</string>
+    <string name="vpp_desc_vsp">"通过降低噪音、增强色彩和对比度，提高视频质量。"</string>
+    <string name="vpp_desc_gen">"通过降低噪音、消除交错式扫描内容产生的假象，提高视频质量。"</string>
 </resources>
